@@ -1,0 +1,27 @@
+<launch>
+
+    <arg name="laser_enabled" default="true"/>
+    <arg name="realsense_enabled" default="true"/>
+
+
+    <include file="$(find heat_map)/launch/playpen.launch" />
+
+    <include file="$(find husky_gazebo)/launch/spawn_husky.launch">
+        <arg name="laser_enabled" value="$(arg laser_enabled)"/>
+        <arg name="realsense_enabled" value="$(arg realsense_enabled)"/>
+        <arg name="x" value="0"/>
+        <arg name="y" value="0"/>
+        <arg name="z" value="0.18"/>
+    </include>    
+
+    <arg name="map_file" default="$(find heat_map)/maps_gmapping/six_rooms_oriented.yaml"/>
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
+
+    <include file="$(find heat_map)/launch/view_robot.launch" />
+    <!--<include file="$(find husky_navigation)/launch/amcl.launch" />-->
+    <include file="$(find husky_navigation)/launch/move_base.launch" />
+    <node pkg="heat_map" name="tf_publisher" type="tf_publisher.py" output="screen"/>
+    <include file="$(find darknet_ros)/launch/darknet_ros.launch" /> 
+    <node pkg="tf2_ros" type="static_transform_publisher" name="link1_broadcaster" args="0 0 0 0 0 0 map odom"/>
+        
+</launch>

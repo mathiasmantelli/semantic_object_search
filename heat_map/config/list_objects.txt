@@ -1,0 +1,11 @@
+book
+Book
+cup
+Computer mouse
+Computer monitor
+Mobile phone
+monitor
+mug
+Mug
+Pen
+tvmonitor

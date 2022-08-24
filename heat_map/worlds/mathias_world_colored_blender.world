@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+	<include>
+		<pose>1 0 0  0 0 0</pose>
+		<uri>model:///home/mathias/catkin_yolo/src/heat_map/worlds/chosen_map</uri>
+	</include>
+
+<!--####################################################################################-->
+	<model name="my_mesh_naosei1">
+		<pose>-13.41 8.19 -0.65  0 0 -1.53</pose>
+		<static>true</static>
+		<link name="naosei1">
+			<visual name="naosei1_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table_pens.dae</uri>
+					<scale>2 2 2</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei2">
+		<pose>-4.89 8.69 .11  0 0 -0.78</pose>
+		<static>true</static>
+		<link name="naosei2">
+			<visual name="naosei2_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table_mugs.dae</uri>
+					<scale>0.12 0.12 0.12</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei3">
+		<pose>-6.34 22.8 0.13  0 0 2.33</pose>
+		<static>true</static>
+		<link name="naosei3">
+			<visual name="naosei3_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table_mouses.dae</uri>
+					<scale>0.14 0.14 0.14</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+<!--####################################################################################-->
+	<model name="my_mesh_naosei4">
+		<pose>4.3 23.08 -0.05  0 0 -0.8</pose>
+		<static>true</static>
+		<link name="naosei4">
+			<visual name="naosei4_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table_monitor.dae</uri>
+					<scale>0.13 0.13 0.13</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei5">
+		<pose>-2.35 19.09 0.14  0 0 .76</pose>
+		<static>true</static>
+		<link name="naosei5">
+			<visual name="naosei5_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table_books.dae</uri>
+					<scale>0.16 0.16 0.16</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei6">
+		<pose>22.04 7.3 0  0 0 .2</pose>
+		<static>true</static>
+		<link name="naosei6">
+			<visual name="naosei6_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table2_pens.dae</uri>
+					<scale>0.17 0.17 0.17</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei7">
+		<pose>-2.35 4.04 0  0 0 0.13</pose>
+		<static>true</static>
+		<link name="naosei7">
+			<visual name="naosei7_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table2_mugs.dae</uri>
+					<scale>0.17 0.17 0.17</scale></mesh>
+				</geometry> 
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei8">
+		<pose>-16.09 6.93 0  0 0 1.62</pose>
+		<static>true</static>
+		<link name="naosei8">
+			<visual name="naosei8_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table2_mouses.dae</uri>
+					<scale>0.39 0.39 0.39</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei9">
+		<pose>-20.06 -14.48 0  0 0 -0.39</pose>
+		<static>true</static>
+		<link name="naosei9">
+			<visual name="naosei9_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table2_monitor.dae</uri>
+					<scale>0.14 0.14 0.14</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei10">
+		<pose>-7.9 -11.37 0  0 0 0.39</pose>
+		<static>true</static>
+		<link name="naosei10">
+			<visual name="naosei10_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table2_monitor.dae</uri>
+					<scale>0.14 0.14 0.14</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei11">
+		<pose>19.89 -13.48 0  0 0 1.57</pose>
+		<static>true</static>
+		<link name="naosei11">
+			<visual name="naosei11_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table2_monitor.dae</uri>
+					<scale>0.14 0.14 0.14</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei12">
+		<pose>21.66 -5.65 0  0 0 -3.07</pose>
+		<static>true</static>
+		<link name="naosei12">
+			<visual name="naosei12_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table2_monitor.dae</uri>
+					<scale>0.14 0.14 0.14</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei13">
+		<pose>11.05 -11.87 0  0 0 3.12</pose>
+		<static>true</static>
+		<link name="naosei13">
+			<visual name="naosei13_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table2_monitor.dae</uri>
+					<scale>0.14 0.14 0.14</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+<!--####################################################################################-->
+	<model name="my_mesh_naosei14">
+		<pose>22.56 -19.45 0  0 0 -2.35</pose>
+		<static>true</static>
+		<link name="naosei14">
+			<visual name="naosei14_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table2_books.dae</uri>
+					<scale>0.18 0.18 0.18</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei15">
+		<pose>7.66 -22.83 0  0 0 2.49</pose>
+		<static>true</static>
+		<link name="naosei15">
+			<visual name="naosei15_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table2_books.dae</uri>
+					<scale>0.18 0.18 0.18</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei16">
+		<pose>-8.83 -22.67 0  0 0 -1.63</pose>
+		<static>true</static>
+		<link name="naosei16">
+			<visual name="naosei16_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table2_mouses.dae</uri>
+					<scale>0.39 0.39 0.39</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei17">
+		<pose>2.28 -5.68 0  0 0 -1.6</pose>
+		<static>true</static>
+		<link name="naosei17">
+			<visual name="naosei17_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table2_pens.dae</uri>
+					<scale>0.17 0.17 0.17</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+
+	<model name="my_mesh_table18">
+		<pose>3.77 14.27 0.14  0 0 -.82</pose>
+		<static>true</static>
+		<link name="table18">
+			<visual name="table18_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table_books.dae</uri>
+					<scale>0.16 0.16 0.16</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+
+	<model name="my_mesh_table19">
+		<pose>6.63 2.42 0.14  0 0 -2.38</pose>
+		<static>true</static>
+		<link name="table19">
+			<visual name="table19_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table_books.dae</uri>
+					<scale>0.16 0.16 0.16</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+
+	<model name="my_mesh_table20">
+		<pose>-11.10 -5.94 .14  0 0 -2.37</pose>
+		<static>true</static>
+		<link name="table20">
+			<visual name="table20_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table_books.dae</uri>
+					<scale>0.16 0.16 0.16</scale></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+
+	<model name="my_mesh_table21">
+		<pose>22 17.46 0  0 0 -2.77</pose>
+		<static>true</static>
+		<link name="table21">
+			<visual name="table21_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/models/table2_monitor.dae</uri>
+					<scale>0.14 0.14 0.14</scale></mesh>
+				</geometry>
+			</visual>    		
+		</link>
+	</model>
+<!--####################################################################################-->
+  </world>
+</sdf>

@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+	<include>
+		<pose>-3.75 10.58 0  0 0 0</pose>
+		<uri>model:///home/mathias/catkin_yolo/src/heat_map/worlds/new_map_global_mission</uri>
+	</include>
+<!--
+	<model name="my_mesh_table">
+		<pose>4 13.89 0  0 0 0</pose>
+		<static>true</static>
+		<link name="table18">
+			<visual name="table18_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/8D6+Table/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_manybooks">
+		<pose>-17.52 8.55 0.76  0 0 0</pose>
+		<static>true</static>
+		<link name="manybooks1">
+			<visual name="manybooks1_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+	<model name="my_mesh_books">
+		<pose>-6.0 8.46 0.76  0 0 0</pose>
+		<static>true</static>
+		<link name="books2">
+			<visual name="books_visual2">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_monitor">
+		<pose>-2.49 19.80 0.76  0 0 1.57</pose>
+		<static>true</static>
+		<link name="monitor5">
+			<visual name="monitor5_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/MAXX+DIAMOND+-+Suporte+Apoio+de+Monitor+em+Alumínio+5+cm+Altura+-+Branco/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_mug">
+		<pose>-14.63 7.01 0.76  0 0 -2.34</pose>
+		<static>true</static>
+		<link name="mug8">
+			<visual name="mug8_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/51708+Mug+Vibrations/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_cutlery">
+		<pose>6.69 3 0.46  1.57 0 0.78</pose>
+		<static>true</static>
+		<link name="cutlery19">
+			<visual name="cutlery19_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Cutlery_01/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+-->
+
+<!--####################################################################################-->
+	<model name="my_mesh_table1">
+		<pose>11.56 -2.61 0  0 0 0</pose>
+		<static>true</static>
+		<link name="table18">
+			<visual name="table18_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/8D6+Table/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+<!--	<model name="my_mesh_books1">
+		<pose>12.52 -1.59 .46  0 0 -1.75</pose>
+		<static>true</static>
+		<link name="books2">
+			<visual name="books_visual2">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>-->
+
+<!--	<include>
+		 <uri>model:///home/mathias/catkin_workspace/src/heat_map_project/models/ACE_Coffee_Mug_Kristen_16_oz_cup</uri>
+	</include> -->
+<!--####################################################################################-->
+	<model name="my_mesh_table2">
+		<pose>1.30 2.47 0  0 0 0</pose>
+		<static>true</static>
+		<link name="table18">
+			<visual name="table18_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/8D6+Table/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_monitor2">
+		<pose>2.31 2.55 0.46  0 0 1.64</pose>
+		<static>true</static>
+		<link name="monitor5">
+			<visual name="monitor5_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/MAXX+DIAMOND+-+Suporte+Apoio+de+Monitor+em+Alumínio+5+cm+Altura+-+Branco/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_table3">
+		<pose>4.92 6.57 0  0 0 0</pose>
+		<static>true</static>
+		<link name="table18">
+			<visual name="table18_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/8D6+Table/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_books3">
+		<pose>5.54 7.43 .46  0 0 -1.06</pose>
+		<static>true</static>
+		<link name="books2">
+			<visual name="books_visual2">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_table4">
+		<pose>3.16 18.19 0  0 0 0</pose>
+		<static>true</static>
+		<link name="table18">
+			<visual name="table18_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/8D6+Table/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_mug4">
+		<pose>4.21 18.54 0.46  0 0 0</pose>
+		<static>true</static>
+		<link name="mug8">
+			<visual name="mug8_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/51708+Mug+Vibrations/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_table5">
+		<pose>17.75 17.04 0  0 0 0</pose>
+		<static>true</static>
+		<link name="table18">
+			<visual name="table18_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/8D6+Table/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_mug5">
+		<pose>18.65 17.51 0.46  0 0 -1.40</pose>
+		<static>true</static>
+		<link name="mug8">
+			<visual name="mug8_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/51708+Mug+Vibrations/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_table6">
+		<pose>-10.50 10 0  0 0 0</pose>
+		<static>true</static>
+		<link name="table18">
+			<visual name="table18_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/8D6+Table/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_monitor6">
+		<pose>-9.53 10.11 0.46  0 0 1.53</pose>
+		<static>true</static>
+		<link name="monitor5">
+			<visual name="monitor5_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/MAXX+DIAMOND+-+Suporte+Apoio+de+Monitor+em+Alumínio+5+cm+Altura+-+Branco/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_table7">
+		<pose>-0.26 24.59 0  0 0 0</pose>
+		<static>true</static>
+		<link name="table18">
+			<visual name="table18_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/8D6+Table/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_mug7">
+		<pose>0.65 25.14 0.46  0 0 -1.40</pose>
+		<static>true</static>
+		<link name="mug8">
+			<visual name="mug8_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/51708+Mug+Vibrations/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_table8">
+		<pose>-15.09 1.86 0  0 0 0</pose>
+		<static>true</static>
+		<link name="table18">
+			<visual name="table18_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/8D6+Table/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+	<model name="my_mesh_mug8">
+		<pose>-13.99 2.39 0.46  0 0 -1.09</pose>
+		<static>true</static>
+		<link name="mug8">
+			<visual name="mug8_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/51708+Mug+Vibrations/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_table9">
+		<pose>-20.33 5.75 0  0 0 0</pose>
+		<static>true</static>
+		<link name="table18">
+			<visual name="table18_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/8D6+Table/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_monitor9">
+		<pose>-19.38 5.8 0.46  0 0 1.53</pose>
+		<static>true</static>
+		<link name="monitor5">
+			<visual name="monitor5_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/MAXX+DIAMOND+-+Suporte+Apoio+de+Monitor+em+Alumínio+5+cm+Altura+-+Branco/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_table10">
+		<pose>-18.90 23.27 0  0 0 0</pose>
+		<static>true</static>
+		<link name="table18">
+			<visual name="table18_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/8D6+Table/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_computer10">
+		<pose>-18.35 23.75 0.46  0 0 0.03</pose>
+		<static>true</static>
+		<link name="computer">
+			<visual name="computer_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Computer/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_table11">
+		<pose>-31.26 13.59 0  0 0 0</pose>
+		<static>true</static>
+		<link name="table18">
+			<visual name="table18_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/8D6+Table/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_books11">
+		<pose>-30.67 14.12 .46  0 0 -0.22</pose>
+		<static>true</static>
+		<link name="books2">
+			<visual name="books_visual2">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_table12">
+		<pose>-7.84 22.89 0  0 0 0</pose>
+		<static>true</static>
+		<link name="table18">
+			<visual name="table18_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/8D6+Table/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_books12">
+		<pose>-7.29 23.24 .46  0 0 0.12</pose>
+		<static>true</static>
+		<link name="books2">
+			<visual name="books_visual2">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+  </world>
+</sdf>

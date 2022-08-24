@@ -1,0 +1,826 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+<!--    <model name="my_mesh">
+      <pose>0 0 0  0 0 0</pose>
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+          <geometry> 
+            <mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/FRAMING_TEST21/model.dae</uri></mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model> 
+
+    <include>
+      <pose>0 0 4  0 0 0</pose>
+      <uri>model:///home/mathias/catkin_yolo/src/heat_map/worlds/stationery/book_1</uri>
+    </include>
+
+-->
+	<include>
+		<pose>1 0 0  0 0 0</pose>
+		<uri>model:///home/mathias/catkin_yolo/src/heat_map/worlds/chosen_map</uri>
+	</include>
+
+<!--
+	<model name="my_mesh_computer">
+		<pose>1 0 3  0 0 0</pose>
+		<static>true</static>
+		<link name="computer">
+			<visual name="computer_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Computer/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+-->
+
+<!--
+	<model name="my_mesh_estante">
+		<pose>-4 0 3  0 0 0</pose>
+		<static>true</static>
+		<link name="estante">
+			<visual name="estante_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Rebecca_Meier_Dern/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_estante2">
+		<pose>-4 -4 3  0 0 0</pose>
+		<static>true</static>
+		<link name="estante2">
+			<visual name="estante2_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Estante+Lygx/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model> 
+-->
+<!--####################################################################################-->
+	<model name="my_mesh_naosei1">
+		<pose>-15.55 7.97 0  0 0 0</pose>
+		<static>true</static>
+		<link name="naosei1">
+			<visual name="naosei1_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/421-716/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_manybooks1">
+		<pose>-17.52 8.55 0.76  0 0 0</pose>
+		<static>true</static>
+		<link name="manybooks1">
+			<visual name="manybooks1_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_books1">
+		<pose>-16.07 8.55 0.76  0 0 0</pose>
+		<static>true</static>
+		<link name="books1">
+			<visual name="books_visual1">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Books_07.skp/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei2">
+		<pose>-4.17 7.97 0  0 0 0</pose>
+		<static>true</static>
+		<link name="naosei2">
+			<visual name="naosei2_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/421-716/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_manybooks2">
+		<pose>-5.67 8.46 0.76  0 0 0</pose>
+		<static>true</static>
+		<link name="manybooks2">
+			<visual name="manybooks2_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_books2">
+		<pose>-6.0 8.46 0.76  0 0 0</pose>
+		<static>true</static>
+		<link name="books2">
+			<visual name="books_visual2">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Books_07.skp/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei3">
+		<pose>-7.8 23.71 0  0 0 3.14</pose>
+		<static>true</static>
+		<link name="naosei3">
+			<visual name="naosei3_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/421-716/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_manybooks3">
+		<pose>-5.86 23.12 0.76  0 0 3.14</pose>
+		<static>true</static>
+		<link name="manybooks3">
+			<visual name="manybooks3_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_books3">
+		<pose>-7.3 23.18 0.76  0 0 3.14</pose>
+		<static>true</static>
+		<link name="books3">
+			<visual name="books_visual3">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Books_07.skp/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei4">
+		<pose>3.70 23.71 0  0 0 3.14</pose>
+		<static>true</static>
+		<link name="naosei4">
+			<visual name="naosei4_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/421-716/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_manybooks4">
+		<pose>4.41 23.23 0.76  0 0 3.14</pose>
+		<static>true</static>
+		<link name="manybooks4">
+			<visual name="manybooks4_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_monitor4">
+		<pose>4.76 23.09 0.76  0 0 0</pose>
+		<static>true</static>
+		<link name="monitor4">
+			<visual name="monitor4_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/MAXX+DIAMOND+-+Suporte+Apoio+de+Monitor+em+Alumínio+5+cm+Altura+-+Branco/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei5">
+		<pose>-3.16 18.66 0  0 0 -1.57</pose>
+		<static>true</static>
+		<link name="naosei5">
+			<visual name="naosei5_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/421-716/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_manybooks5">
+		<pose>-2.66 19.45 0.76  0 0 -1.57</pose>
+		<static>true</static>
+		<link name="manybooks5">
+			<visual name="manybooks5_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_monitor5">
+		<pose>-2.49 19.80 0.76  0 0 1.57</pose>
+		<static>true</static>
+		<link name="monitor5">
+			<visual name="monitor5_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/MAXX+DIAMOND+-+Suporte+Apoio+de+Monitor+em+Alumínio+5+cm+Altura+-+Branco/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei6">
+		<pose>24.21 7.75 0  0 0 1.57</pose>
+		<static>true</static>
+		<link name="naosei6">
+			<visual name="naosei6_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/421-716/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_manybooks6">
+		<pose>23.74 6.92 0.76  0 0 1.57</pose>
+		<static>true</static>
+		<link name="manybooks6">
+			<visual name="manybooks6_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_monitor6">
+		<pose>24.13 6.48 0.83  0 0 -1.57</pose>
+		<static>true</static>
+		<link name="monitor6">
+			<visual name="monitor6_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/17_+Desktop+LED+Monitor/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei7">
+		<pose>-0.91 4.93 0  0 0 1.57</pose>
+		<static>true</static>
+		<link name="naosei7">
+			<visual name="naosei7_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/421-716/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_manybooks7">
+		<pose>-1.38 4.09 0.76  0 0 1.57</pose>
+		<static>true</static>
+		<link name="manybooks7">
+			<visual name="manybooks7_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_cutlery7">
+		<pose>-1.56 3.14 0.75  1.57 0 1.57</pose>
+		<static>true</static>
+		<link name="cutlery7">
+			<visual name="cutlery7_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Cutlery_01/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei8">
+		<pose>-16.14 7.67 0  0 0 3.14</pose>
+		<static>true</static>
+		<link name="naosei8">
+			<visual name="naosei8_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/421-716/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_manybooks8">
+		<pose>-15.30 7.23 0.76  0 0 3.14</pose>
+		<static>true</static>
+		<link name="manybooks8">
+			<visual name="manybooks8_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_mug8">
+		<pose>-14.63 7.01 0.76  0 0 -2.34</pose>
+		<static>true</static>
+		<link name="mug8">
+			<visual name="mug8_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/51708+Mug+Vibrations/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+<!--####################################################################################-->
+	<model name="my_mesh_naosei9">
+		<pose>-22.04 -13.65 0  0 0 -1.57</pose>
+		<static>true</static>
+		<link name="naosei9">
+			<visual name="naosei9_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/421-716/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_manybooks9">
+		<pose>-21.52 -12.75 0.76  0 0 -1.57</pose>
+		<static>true</static>
+		<link name="manybooks9">
+			<visual name="manybooks9_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_monitor9">
+		<pose>-21.38 -12.32 0.76  0 0 1.57</pose>
+		<static>true</static>
+		<link name="monitor9">
+			<visual name="monitor9_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/MAXX+DIAMOND+-+Suporte+Apoio+de+Monitor+em+Alumínio+5+cm+Altura+-+Branco/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei10">
+		<pose>-9.93 -12.23 0  0 0 -1.57</pose>
+		<static>true</static>
+		<link name="naosei10">
+			<visual name="naosei10_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/421-716/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_manybooks10">
+		<pose>-9.41 -10.0 0.76  0 0 -1.57</pose>
+		<static>true</static>
+		<link name="manybooks10">
+			<visual name="manybooks10_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_mug10">
+		<pose>-9.25 -11.76 0.76  0 0 -1.57</pose>
+		<static>true</static>
+		<link name="mug10">
+			<visual name="mug10_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/51708+Mug+Vibrations/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei11">
+		<pose>19.91 -15.71 0  0 0 0</pose>
+		<static>true</static>
+		<link name="naosei11">
+			<visual name="naosei11_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/421-716/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_manybooks11">
+		<pose>17.63 -15.21 0.76  0 0 0</pose>
+		<static>true</static>
+		<link name="manybooks11">
+			<visual name="manybooks11_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_cutlery11">
+		<pose>19.13 -15 0.78  1.57 0 0</pose>
+		<static>true</static>
+		<link name="cutlery11">
+			<visual name="cutlery11_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Cutlery_01/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei12">
+		<pose>24.21 -5.48 0  0 0 1.57</pose>
+		<static>true</static>
+		<link name="naosei12">
+			<visual name="naosei12_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/421-716/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_manybooks12">
+		<pose>23.70 -7.66 0.76  0 0 1.57</pose>
+		<static>true</static>
+		<link name="manybooks12">
+			<visual name="manybooks12_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_monitor12">
+		<pose>24.12 -5.32 0.83  0 0 -1.57</pose>
+		<static>true</static>
+		<link name="monitor12">
+			<visual name="monitor12_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/17_+Desktop+LED+Monitor/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei13">
+		<pose>13.75 -11.92 0  0 0 1.57</pose>
+		<static>true</static>
+		<link name="naosei13">
+			<visual name="naosei13_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/421-716/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_manybooks13">
+		<pose>13.25 -12.83 0.76  0 0 1.57</pose>
+		<static>true</static>
+		<link name="manybooks13">
+			<visual name="manybooks13_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_mug13">
+		<pose>13.18 -13.86 0.76  0 0 -1.57</pose>
+		<static>true</static>
+		<link name="mug13">
+			<visual name="mug13_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/51708+Mug+Vibrations/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei14">
+		<pose>24.18 -19.09 0  0 0 1.57</pose>
+		<static>true</static>
+		<link name="naosei14">
+			<visual name="naosei14_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/421-716/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_manybooks14">
+		<pose>23.70 -21.19 0.76  0 0 1.57</pose>
+		<static>true</static>
+		<link name="manybooks14">
+			<visual name="manybooks14_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_monitor14">
+		<pose>24.12 -18.85 0.83  0 0 -1.57</pose>
+		<static>true</static>
+		<link name="monitor14">
+			<visual name="monitor14_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/17_+Desktop+LED+Monitor/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei15">
+		<pose>8.57 -23.52 0  0 0 0</pose>
+		<static>true</static>
+		<link name="naosei15">
+			<visual name="naosei15_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/421-716/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_manybooks15">
+		<pose>6.38 -23.04 0.76  0 0 0</pose>
+		<static>true</static>
+		<link name="manybooks15">
+			<visual name="manybooks15_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_cutlery15">
+		<pose>8.05 -22.7 0.78  1.57 0 0</pose>
+		<static>true</static>
+		<link name="cutlery15">
+			<visual name="cutlery15_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Cutlery_01/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei16">
+		<pose>-8.89 -23.52 0  0 0 0</pose>
+		<static>true</static>
+		<link name="naosei16">
+			<visual name="naosei16_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/421-716/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_manybooks16">
+		<pose>-11.17 -23.14 0.76  0 0 0</pose>
+		<static>true</static>
+		<link name="manybooks16">
+			<visual name="manybooks16_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_monitor16">
+		<pose>-8.97 -22.93 0.76  0 0 3.14</pose>
+		<static>true</static>
+		<link name="monitor16">
+			<visual name="monitor16_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/MAXX+DIAMOND+-+Suporte+Apoio+de+Monitor+em+Alumínio+5+cm+Altura+-+Branco/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+	<model name="my_mesh_naosei17">
+		<pose>3.37 -7.10 0  0 0 0</pose>
+		<static>true</static>
+		<link name="naosei17">
+			<visual name="naosei17_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/421-716/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_manybooks17">
+		<pose>1.10 -6.64 0.76  0 0 0</pose>
+		<static>true</static>
+		<link name="manybooks17">
+			<visual name="manybooks17_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Group_826+(1)/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_monitor17">
+		<pose>3.36 -6.64 0.76  0 0 3.14</pose>
+		<static>true</static>
+		<link name="monitor17">
+			<visual name="monitor17_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/MAXX+DIAMOND+-+Suporte+Apoio+de+Monitor+em+Alumínio+5+cm+Altura+-+Branco/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+
+	<model name="my_mesh_table18">
+		<pose>4 13.89 0  0 0 0</pose>
+		<static>true</static>
+		<link name="table18">
+			<visual name="table18_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/8D6+Table/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_monitor18">
+		<pose>4.52 14.80 0.46  0 0 -0.78</pose>
+		<static>true</static>
+		<link name="monitor18">
+			<visual name="monitor18_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/MAXX+DIAMOND+-+Suporte+Apoio+de+Monitor+em+Alumínio+5+cm+Altura+-+Branco/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+
+	<model name="my_mesh_table19">
+		<pose>5.94 2.4 0  0 0 0</pose>
+		<static>true</static>
+		<link name="table19">
+			<visual name="table19_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/8D6+Table/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_cutlery19">
+		<pose>6.69 3 0.46  1.57 0 0.78</pose>
+		<static>true</static>
+		<link name="cutlery19">
+			<visual name="cutlery19_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Cutlery_01/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+
+	<model name="my_mesh_table20">
+		<pose>-12.75 -5.13 0  0 0 0</pose>
+		<static>true</static>
+		<link name="table20">
+			<visual name="table20_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/8D6+Table/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+
+	<model name="my_mesh_mug20">
+		<pose>-11.76 -4.69 0.46  0 0 -1.09</pose>
+		<static>true</static>
+		<link name="mug20">
+			<visual name="mug20_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/51708+Mug+Vibrations/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+
+	<model name="my_mesh_table21">
+		<pose>22 17.46 0  0 0 0</pose>
+		<static>true</static>
+		<link name="table21">
+			<visual name="table21_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/8D6+Table/model.dae</uri></mesh>
+				</geometry>
+			</visual>    		
+		</link>
+	</model>
+
+	<model name="my_mesh_monitor21">
+		<pose>22.6 18.42 0.46  0 0 -0.77</pose>
+		<static>true</static>
+		<link name="monitor21">
+			<visual name="monitor21_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/MAXX+DIAMOND+-+Suporte+Apoio+de+Monitor+em+Alumínio+5+cm+Altura+-+Branco/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+
+	<model name="my_mesh_estante22">
+		<pose>0 0.77 0  0 0 1.57</pose>
+		<static>true</static>
+		<link name="estante22">
+			<visual name="estante22_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Estante+1gav+Coleção+Laços+Ref+MAS.222.4+F15/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+
+	<model name="my_mesh_estante23">
+		<pose>-21.43 -4.58 0  0 0 1.57</pose>
+		<static>true</static>
+		<link name="estante23">
+			<visual name="estante23_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Estante+1gav+Coleção+Laços+Ref+MAS.222.4+F15/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+
+	<model name="my_mesh_estante24">
+		<pose>0.38 -16.34 0  0 0 1.57</pose>
+		<static>true</static>
+		<link name="estante24">
+			<visual name="estante24_visual">
+				<geometry> 
+					<mesh><uri>file:///home/mathias/catkin_yolo/src/heat_map/worlds/Estante+1gav+Coleção+Laços+Ref+MAS.222.4+F15/model.dae</uri></mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+<!--####################################################################################-->
+  </world>
+</sdf>

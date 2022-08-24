@@ -733,15 +733,15 @@ void RosAriaNode::publish()
   pose_pub.publish(position);
 
 
-  ROS_INFO_NAMED("rosaria", "RosAria: publish: (time %f) pose x: %f, pose y: %f, pose angle: %f; linear vel x: %f, vel y: %f; angular vel z: %f", 
-    position.header.stamp.toSec(), 
-    (double)position.pose.pose.position.x,
-    (double)position.pose.pose.position.y,
-    (double)position.pose.pose.orientation.w,
-    (double)position.twist.twist.linear.x,
-    (double)position.twist.twist.linear.y,
-    (double)position.twist.twist.angular.z
-  );
+  // ROS_INFO_NAMED("rosaria", "RosAria: publish: (time %f) pose x: %f, pose y: %f, pose angle: %f; linear vel x: %f, vel y: %f; angular vel z: %f", 
+  //   position.header.stamp.toSec(), 
+  //   (double)position.pose.pose.position.x,
+  //   (double)position.pose.pose.position.y,
+  //   (double)position.pose.pose.orientation.w,
+  //   (double)position.twist.twist.linear.x,
+  //   (double)position.twist.twist.linear.y,
+  //   (double)position.twist.twist.angular.z
+  // );
 
   if(isSimulation_){
       Pose simAbsoluteTruePose_ = getAbsoluteTruePose();

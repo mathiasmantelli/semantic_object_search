@@ -18,11 +18,29 @@
 
   
 <!-- SLAM -->
-<!--
+
   <node name="slam_gmapping" pkg="gmapping" type="slam_gmapping" args="scan:=rosaria_phi/laser_laserscan">
-    <param name="~delta" value="0.1" />
-    <param name="~map_update_interval" value="2" />
+    <param name="~delta" value="0.05" />
+    <param name="~map_update_interval" value="1" />
   </node>
--->
+
+
+  <arg name="cmd_vel_topic" default="/rosaria_phi/cmd_vel" />
+  <arg name="odom_topic" default="odom" />
+  <arg name="move_forward_only" default="true"/>
+
+  <!-- move_base -->
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
+    <rosparam file="$(find heat_map)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find heat_map)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find heat_map)/param/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find heat_map)/param/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find heat_map)/param/move_base_params.yaml" command="load" />
+    <rosparam file="$(find heat_map)/param/dwa_local_planner_params.yaml" command="load" />
+    <remap from="cmd_vel" to="$(arg cmd_vel_topic)"/>
+    <remap from="odom" to="$(arg odom_topic)"/>
+    <param name="DWAPlannerROS/min_vel_x" value="0.0" if="$(arg move_forward_only)" />
+  </node>
 
 </launch>

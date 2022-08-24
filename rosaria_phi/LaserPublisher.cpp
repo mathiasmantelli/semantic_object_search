@@ -89,8 +89,8 @@ LaserPublisher::~LaserPublisher()
 
 void LaserPublisher::readingsCB()
 {
-  ROS_INFO_NAMED("LaserPublisher", "LaserPublisher: readingsCB() - %lu ms since last readingsCB() call.\n", readingsCallbackTime->mSecSince());
-  printf("readingsCB(): %lu ms since last readingsCB() call.\n", readingsCallbackTime->mSecSince());
+  // ROS_INFO_NAMED("LaserPublisher", "LaserPublisher: readingsCB() - %lu ms since last readingsCB() call.\n", readingsCallbackTime->mSecSince());
+  // printf("readingsCB(): %lu ms since last readingsCB() call.\n", readingsCallbackTime->mSecSince());
   assert(laser);
   laser->lockDevice();
   publishLaserScan();

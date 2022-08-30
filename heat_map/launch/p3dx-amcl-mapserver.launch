@@ -1,0 +1,60 @@
+<launch>
+  <arg name="urdf" default="$(find heat_map)/description/urdf/p3dx.urdf.xacro" />
+  <param name="robot_description" command="$(find xacro)/xacro $(arg urdf)" />
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+<!-- ROSARIA -->
+<!--  para rodar em simulação   _port:=localhost -->
+<!--  para rodar com robô real  _port:=192.168.1.11:10002 -->
+
+  <node name="rosaria_phi" pkg="rosaria_phi" type="RosAria" output="screen" args="_sonar_frame:=front_sonar _publish_aria_lasers:=true _port:=192.168.1.11:10002"/>
+
+<!-- <include file="$(find realsense2_camera)/launch/rs_camera.launch"/> -->
+
+<!-- Visualizador -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find heat_map)/p3dx.rviz" required="true" />
+
+
+<!-- MAP SERVER -->
+  <arg name="map_file" default="$(find heat_map)/maps_gmapping/inf_238_room.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <!-- Place map frame at odometry frame -->
+  <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster"
+      args="0 0 0 0 0 0 map odom 100"/>
+
+  <!-- Localization -->
+  <node pkg="amcl" type="amcl" name="amcl" output="screen">
+    <remap from="scan" to="rosaria_phi/laser_laserscan"/>
+    <param name="odom_frame_id" value="odom"/>
+    <param name="odom_model_type" value="diff-corrected"/>
+    <param name="base_frame_id" value="chassis"/>
+    <param name="update_min_d" value="0.5"/>
+    <param name="update_min_a" value="1.0"/>
+  </node>
+
+
+  <arg name="cmd_vel_topic" default="/rosaria_phi/cmd_vel" />
+  <arg name="odom_topic" default="odom" />
+  <arg name="move_forward_only" default="true"/>
+
+  <!-- move_base -->
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <!-- <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" /> -->
+    <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
+    <rosparam file="$(find heat_map)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find heat_map)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find heat_map)/param/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find heat_map)/param/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find heat_map)/param/move_base_params.yaml" command="load" />
+    <!-- <rosparam file="$(find heat_map)/param/dwa_local_planner_params.yaml" command="load" /> -->
+    <remap from="cmd_vel" to="$(arg cmd_vel_topic)"/>
+    <remap from="odom" to="$(arg odom_topic)"/>
+    <!-- <param name="DWAPlannerROS/min_vel_x" value="0.0" if="$(arg move_forward_only)" /> -->
+    <param name="controller_frequency" value="10.0" />
+
+  </node>
+
+</launch>

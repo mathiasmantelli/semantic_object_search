@@ -6,8 +6,10 @@
     xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
     xmlns:xacro="http://ros.org/wiki/xacro">
 
+
   <xacro:include filename="$(find heat_map)/description/urdf/pioneer3dx_wheel.xacro"/>
   <xacro:include filename="$(find heat_map)/description/urdf/sick_lms100.urdf.xacro" />
+  <!-- <xacro:include filename="$(find realsense2_description)/urdf/test_d435_camera.urdf.xacro"/> -->
 
     <!-- Chassis -->
     <link name="base_link">
@@ -369,7 +371,6 @@
         <joint_properties damping="0.7"/>
     </joint>
 
-
     <create>
     <back_sonar parent="base_link"/>
       <top_plate  parent="base_link"/>
@@ -445,5 +446,30 @@
 <!--      <wheelAcceleration>1.8</wheelAcceleration>-->
 <!--    </plugin>-->
 <!--  </gazebo>-->
+
+	<!-- REALSENSE
+	<link name="r_mount">
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.01 0.01 0.15"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="r_mount_joint" type="fixed">
+		<axis xyz="0 1 0"/>
+		<origin xyz="0.12 0.0 0.33" rpy="0 0 0"/>
+		<parent link="base_link"/>
+		<child link="r_mount"/>
+	</joint>
+	<link name="realsense_mountpoint"/>
+	<joint name="realsense_joint" type="fixed">
+		<axis xyz="0 1 0"/>
+		<origin xyz="0.12 0.0 0.4" rpy="0 0 0"/>
+		<parent link="base_link"/>
+		<child link="realsense_mountpoint"/>
+	</joint>
+	<xacro:intel_realsense_mount prefix="camera" topic="realsense" parent_link="realsense_mountpoint"/>
+    <xacro:include filename="$(find heat_map)/description/urdf/_d435.urdf.xacro"/>  -->
 
 </robot>

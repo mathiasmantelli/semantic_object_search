@@ -1,7 +1,7 @@
 <launch>
   <arg name="urdf" default="$(find heat_map)/description/urdf/p3dx.urdf.xacro" />
   <param name="robot_description" command="$(find xacro)/xacro $(arg urdf)" />
-
+  
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
 
@@ -17,6 +17,8 @@
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find heat_map)/p3dx.rviz" required="true" />
 
 
+  <include file="$(find heat_map)/launch/realsense.launch"/>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="link1_broadcaster" args="0 0 0.5 0 0 0 base_link camera_link"/>
 <!-- MAP SERVER -->
   <arg name="map_file" default="$(find heat_map)/maps_gmapping/inf_238_room.yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>

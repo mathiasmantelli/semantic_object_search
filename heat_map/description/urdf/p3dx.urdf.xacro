@@ -9,13 +9,11 @@
 
   <xacro:include filename="$(find heat_map)/description/urdf/pioneer3dx_wheel.xacro"/>
   <xacro:include filename="$(find heat_map)/description/urdf/sick_lms100.urdf.xacro" />
-  <!-- <xacro:include filename="$(find realsense2_description)/urdf/test_d435_camera.urdf.xacro"/> -->
+  <xacro:include filename="$(find heat_map)/description/urdf/intel_realsense.urdf.xacro"/>
 
     <!-- Chassis -->
     <link name="base_link">
         <inertial>
-            <!-- P3AT 18.6kg plus three batteries @ 2.4kg each  minus four wheels @ 1.4 kg ea and top plate @ 0.1 kg-->
-<!--            <mass value="21.5"/> -->
             <mass value="200"/> 
             <!--<origin xyz="-0.025 0 -0.223"/>-->
             <origin xyz="0 0 0"/>
@@ -38,7 +36,6 @@
         </collision>
     </link>
     <gazebo reference="base_link">
-        <!-- material value="Gazebo/Black"/ -->
         <material>Gazebo/Red</material>
     </gazebo>
 
@@ -59,7 +56,6 @@
         </visual>
     </link>
     <gazebo reference="top_plate">
-        <!-- material value="Gazebo/Black"/ -->
         <material>Gazebo/Black</material>
     </gazebo>
 
@@ -123,7 +119,6 @@
     </joint>
 
     <!-- Caster -->
-<!--    <joint name="base_caster_swivel_joint" type="continuous">-->
     <joint name="base_caster_swivel_joint" type="fixed">
         <origin xyz="-0.185 0 0.055" rpy="0 0 0"/>
         <anchor xyz="0 0 0"/>
@@ -181,7 +176,6 @@
         <material value="Gazebo/Grey"/>
     </gazebo>
 
-<!--    <joint name="caster_swivel_hubcap_joint" type="continuous">-->
     <joint name="caster_swivel_hubcap_joint" type="fixed">
         <origin xyz="-0.026 0 -0.016" rpy="0 0 0"/>
         <axis xyz="0 1 0"/>
@@ -243,9 +237,6 @@
         </inertial>
         <collision>
             <origin xyz="0 0 0" rpy="${-3.1415927/2.0} 0 0"/>
-<!--            <geometry>-->
-<!--                <cylinder radius="0.09" length="0.01"/>-->
-<!--            </geometry>-->
             <geometry>
                 <mesh filename="package://heat_map/description/p3dx_meshes/left_hubcap.stl"/>
             </geometry>
@@ -271,7 +262,6 @@
         <collision>
             <origin xyz="0 0 0" rpy="${-3.1415927/2} 0 0"/>
             <geometry>
-<!--                <cylinder radius="0.111" length="0.075"/>-->
                 <mesh filename="package://heat_map/description/p3dx_meshes/left_wheel.stl"/>
             </geometry>
         </collision>
@@ -289,7 +279,7 @@
         <material value="Gazebo/Black"/>
     </gazebo>
 
-    <joint name="left_wheel_joint" type="continuous"> <!-- type="continuous" -->
+    <joint name="left_wheel_joint" type="continuous">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="left_hub"/>
         <child link="left_wheel"/>
@@ -319,7 +309,6 @@
             <origin xyz="0 0 0" rpy="${-3.1415927/2.0} 0 0"/>
             <geometry>
                 <mesh filename="package://heat_map/description/p3dx_meshes/right_hubcap.stl"/>
-<!--                <cylinder radius="0.09" length="0.01"/>-->
             </geometry>
         </collision>
     </link>
@@ -344,7 +333,6 @@
             <origin xyz="0 0 0" rpy="${-3.1415927/2} 0 0"/>
             <geometry>
                 <mesh filename="package://heat_map/description/p3dx_meshes/right_wheel.stl"/>
-<!--                <cylinder radius="0.111" length="0.075"/>-->
             </geometry>
         </collision>
         <visual>
@@ -361,7 +349,7 @@
         <material value="Gazebo/Black"/>
     </gazebo>
 
-    <joint name="right_wheel_joint" type="continuous"> <!-- type="continuous" -->
+    <joint name="right_wheel_joint" type="continuous"> 
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="right_hub"/>
         <child link="right_wheel"/>
@@ -370,51 +358,19 @@
         <limit effort="100" velocity="100" />
         <joint_properties damping="0.7"/>
     </joint>
-
     <create>
-    <back_sonar parent="base_link"/>
+        <back_sonar parent="base_link"/>
       <top_plate  parent="base_link"/>
-      </create>
-
-<!--    <transmission name="right_transmission">-->
-<!--        <type>transmission_interface/SimpleTransmission</type>-->
-<!--        <joint name="right_wheel_joint">-->
-<!--            <hardwareInterface>VelocityJointInterface</hardwareInterface>-->
-<!--        </joint>-->
-<!--        <actuator name="right_motor"/>-->
-<!--        <mechanicalReduction>1</mechanicalReduction>-->
-<!--        <motorTorqueConstant>1</motorTorqueConstant>-->
-<!--    </transmission>-->
-
-<!--    <transmission name="left_transmission">-->
-<!--        <type>transmission_interface/SimpleTransmission</type>-->
-<!--        <joint name="left_wheel_joint">-->
-<!--            <hardwareInterface>VelocityJointInterface</hardwareInterface>-->
-<!--        </joint>-->
-<!--        <actuator name="left_motor"/>-->
-<!--        <mechanicalReduction>1</mechanicalReduction>-->
-<!--        <motorTorqueConstant>1</motorTorqueConstant>-->
-<!--    </transmission>-->
-
+    </create>
     <gazebo>
-<!--        <plugin name="differential_drive_controller_front" filename="libgazebo_ros_diff_drive.so">-->
         <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
 
-<!--        OLD-->
-
-            <!-- interface:position name="position_iface_0"/ -->
-
-
-<!--        NEW-->
             <legacyMode>false</legacyMode>
             <broadcastTF>1</broadcastTF>
             <robotNamespace>sim_p3at</robotNamespace>
             <publishOdomTf>True</publishOdomTf>
             <wheelTorque>30</wheelTorque>
-<!--            <publishWheelTF>True</publishWheelTF>-->
-<!--            <publishWheelJointState>true</publishWheelJointState>-->
 
-<!--        SAME-->
             <alwaysOn>true</alwaysOn>
             <updateRate>100.0</updateRate>
             <leftJoint>left_wheel_joint</leftJoint>
@@ -427,49 +383,33 @@
             <commandTopic>cmd_vel</commandTopic>
 
         </plugin>
-
-      <!-- TODO include P3D (ground truth) plugin -->
-      
-
-      <!-- XXX old urdf included a gazebo_ros_controller_manager plugin with a 1 second update rate -->
     </gazebo>
 
 
-<!-- SICK macro -->
-<!--<sick_lms100 parent="top_plate" x="0.1" y="0.0" z="0.12" rx="0.0" ry="${0*M_PI/180}" rz="${-90*M_PI/180}" />-->
+<!-- LiDAR -->
 <xacro:sick_lms100 parent="top_plate" x="0.1" y="0.0" z="0.12" rx="0.0" ry="${0*M_PI/180}" rz="${0*M_PI/180}" />
 
-<!--  <gazebo>-->
-<!--    <plugin filename="libgazebo_ros_diff_drive.so" name="differential_drive_controller_front">-->
-<!--      <rosDebugLevel>Debug</rosDebugLevel>-->
-<!--      <wheelTorque>30</wheelTorque>-->
-<!--      <wheelAcceleration>1.8</wheelAcceleration>-->
-<!--    </plugin>-->
-<!--  </gazebo>-->
 
-	<!-- REALSENSE
-	<link name="r_mount">
-		<visual>
-			<origin xyz="0 0 0" rpy="0 0 0" />
-			<geometry>
-				<box size="0.01 0.01 0.15"/>
-			</geometry>
-		</visual>
-	</link>
-	<joint name="r_mount_joint" type="fixed">
-		<axis xyz="0 1 0"/>
-		<origin xyz="0.12 0.0 0.33" rpy="0 0 0"/>
-		<parent link="base_link"/>
-		<child link="r_mount"/>
-	</joint>
-	<link name="realsense_mountpoint"/>
-	<joint name="realsense_joint" type="fixed">
-		<axis xyz="0 1 0"/>
-		<origin xyz="0.12 0.0 0.4" rpy="0 0 0"/>
-		<parent link="base_link"/>
-		<child link="realsense_mountpoint"/>
-	</joint>
-	<xacro:intel_realsense_mount prefix="camera" topic="realsense" parent_link="realsense_mountpoint"/>
-    <xacro:include filename="$(find heat_map)/description/urdf/_d435.urdf.xacro"/>  -->
+<!-- REALSENSE -->
+<link name="r_mount">
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+</link>
+<joint name="r_mount_joint" type="fixed">
+    <axis xyz="0 1 0"/>
+    <origin xyz="0.12 0.0 0.33" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="r_mount"/>
+</joint>
+<link name="realsense_mountpoint"/>
+<joint name="realsense_joint" type="fixed">
+    <axis xyz="0 1 0"/>
+    <origin xyz="0.12 0.0 0.4" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="realsense_mountpoint"/>
+</joint>
+<xacro:intel_realsense_mount prefix="camera" topic="realsense" parent_link="realsense_mountpoint"/>
+<xacro:include filename="$(find heat_map)/description/urdf/_d435.urdf.xacro"/> 
 
 </robot>

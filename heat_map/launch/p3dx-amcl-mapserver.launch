@@ -24,6 +24,11 @@
   <arg name="map_file" default="$(find heat_map)/maps_gmapping/inf_238_room.yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
 
+  <arg name="lane_map" default="$(find heat_map)/maps_gmapping/lane_map.yaml"/>
+  <node pkg="map_server" name="map_server2" type="map_server" args="$(arg lane_map)">
+    <remap from="/map" to="/lane_map"/>
+  </node>
+
 
   <!-- AMCL -->
   <include file="$(find heat_map)/launch/amcl_launch.launch" />
@@ -48,4 +53,7 @@
     <param name="controller_frequency" value="50.0" />
   </node>
 
+
+  <!-- YOLO -->
+  <include file="$(find darknet_ros)/launch/darknet_ros.launch" /> 
 </launch>

@@ -5,7 +5,100 @@ global_costmap:
   update_frequency: 10.0
   publish_frequency: 10.0
   transform_tolerance: 0.5
+  
+  obstacle_range: 10.0
+  raytrace_range: 15.0
+  width: 30
+  height: 30
 
-  static_map: false
+  static_map: true
   rolling_window: true
  
+  plugins: 
+      - {name: map_layer,      type: "costmap_2d::StaticLayer"}
+      - {name: lane_map_layer,      type: "costmap_2d::StaticLayer"}
+      - {name: voxel_layer,        type: "spatio_temporal_voxel_layer/SpatioTemporalVoxelLayer"}
+      - {name: inflation_layer,        type: "costmap_2d::InflationLayer"}
+
+  map_layer:
+      map_topic: map
+      subscribe_to_updates: false
+  lane_map_layer:
+      map_topic: lane_map
+      subscribe_to_updates: false
+      trinary_costmap: false
+      lethal_cost_threshold: 255
+  voxel_layer:
+      enabled:                  true
+      voxel_decay:              20    # seconds if linear, e^n if exponential
+      decay_model:              0     # 0=linear, 1=exponential, -1=persistent
+      voxel_size:               0.1  # meters
+      track_unknown_space:      true  # default space is known
+      max_obstacle_height:      1.3   # meters
+      unknown_threshold:        15    # voxel height
+      mark_threshold:           0     # voxel height
+      update_footprint_enabled: true
+      combination_method:       1     # 1=max, 0=override
+      origin_z:                 0.0   # meters
+      publish_voxel_map:        true # default off
+      transform_tolerance:      0.2   # seconds
+      mapping_mode:             false # default off, saves map not for navigation
+      map_save_duration:        60    # default 60s, how often to autosave
+      observation_sources:      base_camera_rgbd_mark base_camera_rgbd_clear lidar_mark lidar_clear
+      base_camera_rgbd_mark:
+        data_type: PointCloud2
+        topic: /camera/depth_registered/points
+        marking: true
+        clearing: false
+        obstacle_range:           5.0   # meters
+        min_obstacle_height: 0.08     # default 0, meters
+        max_obstacle_height: 1.0     # default 3, meters
+        expected_update_rate: 0.0    # default 0, if not updating at this rate at least, remove from buffer 
+        observation_persistence: 0.0 # default 0, use all measurements taken during now-value, 0=latest 
+        inf_is_valid: false          # default false, for laser scans
+        filter: "passthrough"        # default passthrough, apply "voxel", "passthrough", or no filter to sensor data, recommend on 
+        voxel_min_points: 0          # default 0, minimum points per voxel for voxel filter 
+        clear_after_reading: true    # default false, clear the buffer after the layer gets readings from it
+      base_camera_rgbd_clear:
+        data_type: PointCloud2
+        topic: /camera/depth_registered/points
+        marking: false
+        clearing: true
+        max_z: 5.5                  # default 0, meters
+        min_z: 0.0                  # default 10, meters
+        vertical_fov_angle: 1.0472    # default 0.7, radians
+        horizontal_fov_angle: 1.46608 # default 1.04, radians
+        decay_acceleration: 5.0     # default 0, 1/s^2. If laser scanner MUST be 0
+        model_type: 0                # default 0, model type for frustum. 0=depth camera, 1=3d lidar like VLP16 or similar
+      lidar_mark:
+        data_type: LaserScan
+        topic: /rosaria_phi/laser_laserscan
+        marking: true
+        clearing: false
+        obstacle_range:           30.0   # meters
+        min_obstacle_height: 0.0     # default 0, meters
+        max_obstacle_height: 1.0     # default 3, meters
+        expected_update_rate: 0.0    # default 0, if not updating at this rate at least, remove from buffer 
+        observation_persistence: 0.0 # default 0, use all measurements taken during now-value, 0=latest 
+        inf_is_valid: true          # default false, for laser scans
+        filter: "voxel"        # default passthrough, apply "voxel", "passthrough", or no filter to sensor data, recommend on 
+        voxel_min_points: 0          # default 0, minimum points per voxel for voxel filter 
+        clear_after_reading: true    # default false, clear the buffer after the layer gets readings from it
+      lidar_clear:
+        enabled: true
+        data_type: LaserScan
+        topic: /rosaria_phi/laser_laserscan
+        marking: false
+        clearing: true
+        max_z: 30.5                  # default 0, meters
+        min_z: 0.0                  # default 10, meters
+        vertical_fov_angle: 0.5    # default 0.7, radians
+        horizontal_fov_angle: 3.15 # default 1.04, radians
+        inf_is_valid: true          # default false, for laser scans
+        decay_acceleration: 5.0     # default 0, 1/s^2. If laser scanner MUST be 0
+        model_type: 1               # default 0, model type for frustum. 0=depth camera, 1=3d lidar like VLP16 or similar
+  inflation_layer:
+      enabled: true
+      inflate_unkown: true 
+      cost_scaling_factor: 1.0
+      inflation_radius: 0.45

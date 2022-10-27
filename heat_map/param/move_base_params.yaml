@@ -1,7 +1,7 @@
 TebLocalPlannerROS:
 
  odom_topic: odom
- map_frame: /odom
+ map_frame: /map
     
  # Trajectory
   
@@ -11,7 +11,8 @@ TebLocalPlannerROS:
  global_plan_overwrite_orientation: True
  max_global_plan_lookahead_dist: 3.0
  feasibility_check_no_poses: 5
-    
+ allow_init_with_backwards_motion: False
+
  # Robot
          
  max_vel_x: 0.25
@@ -60,7 +61,7 @@ TebLocalPlannerROS:
  weight_acc_lim_x: 1
  weight_acc_lim_theta: 1
  weight_kinematics_nh: 1000
- weight_kinematics_forward_drive: 1
+ weight_kinematics_forward_drive: 900
  weight_kinematics_turning_radius: 1
  weight_optimaltime: 1
  weight_obstacle: 50
